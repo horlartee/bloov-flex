@@ -2,6 +2,7 @@
 export default defineNuxtConfig({
   ssr: false,
   devtools: { enabled: true },
+
   app: {
     pageTransition: { name: "page", mode: "out-in" },
     head: {
@@ -25,24 +26,31 @@ export default defineNuxtConfig({
       ],
     },
   },
+
   modules: ["nuxt-icons", "@pinia/nuxt"],
   components: true,
   css: ["~/assets/css/main.css", "vue-toastification/dist/index.css"],
+
   postcss: {
     plugins: {
       tailwindcss: {},
       autoprefixer: {},
     },
   },
+
   build: {
     transpile: ["@vuepic/vue-datepicker"],
   },
+
   runtimeConfig: {
     public: {
       baseURL: process.env.BASE_ENDPOINT_URL,
     },
   },
+
   devServer: {
     port: 3000,
   },
+
+  compatibilityDate: "2024-11-25",
 });
