@@ -1,0 +1,39 @@
+{
+  "name": "nuxt-app",
+  "private": true,
+  "scripts": {
+    "build": "nuxt build",
+    "start": "node .output/server/index.mjs",
+    "start:prod": "node .output/server/index.mjs",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare",
+    "heroku-postbuild": " nuxt build && rm -rf app/node_modules"
+  },
+  "engines": {
+    "node": "16.15.1",
+    "npm": "8.x"
+  },
+  "devDependencies": {
+    "@nuxt/devtools": "latest",
+    "@vueuse/core": "^10.4.1",
+    "@vueuse/nuxt": "^10.4.1",
+    "autoprefixer": "^10.4.15",
+    "nuxt": "^3.7.0",
+    "postcss": "^8.4.29",
+    "tailwindcss": "^3.3.3"
+  },
+  "dependencies": {
+    "@pinia/nuxt": "^0.4.11",
+    "@vuepic/vue-datepicker": "^6.1.0",
+    "nuxt-app": "file:",
+    "nuxt-icons": "^3.2.1",
+    "pinia": "^2.1.6",
+    "vue-toastification": "2.0.0-rc.5",
+    "vue3-otp-input": "^0.4.1"
+  },
+  "overrides": {
+    "vue": "latest"
+  }
+}
